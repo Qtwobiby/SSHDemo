@@ -28,5 +28,27 @@
             </interceptor-stack>
         </interceptors>
         <default-interceptor-ref name="crudStack"/>
+        <action name="upload" class="com.nancy.shop.action.UploadAction">
+          <!--  <interceptor-ref name="fileUpload">
+            <param name="allowedTypes">image/png.image/gif,image/jpeg</param>
+            <param name="maximumSize">2000</param>
+            </interceptor-ref>-->
+            <interceptor-ref name="defaultStack"/>
+            <param name="savePath">/</param>
+            <result>/WEB-INF/content/upload/success.jsp</result>
+            <!--<result name="input">/WEB-INF/content/upload/upload.jsp</result>-->
+        </action>
     </package>
+    <!--<package name="cqq" extends="struts-default">
+        <action name="uploadPro" class="com.nancy.shop.action.UploadAction">
+            &lt;!&ndash;<interceptor-ref name="fileUpload">&ndash;&gt;
+                &lt;!&ndash;<param name="allowedTypes">image/png.image/gif,image/jpeg</param>&ndash;&gt;
+                &lt;!&ndash;<param name="maximumSize">2000</param>&ndash;&gt;
+            &lt;!&ndash;</interceptor-ref>&ndash;&gt;
+            &lt;!&ndash;<interceptor-ref name="defaultStack"/>&ndash;&gt;
+            <param name="savePath">/uploadFiles</param>
+            <result>/WEB-INF/content/upload/success.jsp</result>
+            <result name="input">/WEB-INF/content/upload/upload.jsp</result>
+        </action>
+    </package>-->
 </struts>
