@@ -51,4 +51,10 @@
             <result name="input">/WEB-INF/content/upload/upload.jsp</result>
         </action>
     </package>-->
+    <package name="cqq" extends="struts-default">
+        <action name="login" class="com.nancy.shop.action.LoginAction">
+            <interceptor-ref name="defaultStack"/>
+            <result>/WEB-INF/content/login/login.jsp</result>
+        </action>
+    </package>
 </struts>
